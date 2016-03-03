@@ -1,6 +1,8 @@
 <template>
     <div id="app" class="container">
-        <h2>Text Wrap Pixels</h2>
+        <div class="page-header">
+            <h2>Text Wrap Pixels</h2>
+        </div>
         <div class="row">
             <div class="text-wrap-px-options col-md-5">
                 <div class="panel panel-default">
@@ -30,7 +32,7 @@ export default {
     data() {
         return {
             options: {
-                maxWidth: 100,
+                maxWidth: 200,
                 splitSymbol: ' ',
                 suffix: '...',
                 class: 'test1 test2',

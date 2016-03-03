@@ -1,14 +1,18 @@
 <template>
     <div class="text-wrap-px-show">
-        <input v-model="showText" class="hidden">
-        <ul v-for="row in textRows" class="list-group">
-            <li class="list-group-item">{{row}}</li>
-        </span>
+        <br />
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <span v-for="row in textRows" v-bind:class="updateClass" v-bind:style="updateStyle">{{row}}<br/></span>
+            </div>
+        </div>
+
+        <span class="text-one-row" v-bind:class="updateClass" v-bind:style="updateStyle">{{showText}}</span>
     </div>
 </template>
 
 <script>
-    var textWrap = require('text-wrap-px');
+    var TextWrapPX = require('text-wrap-px');
     var _ = require('lodash');
 
     export default {
@@ -33,10 +37,24 @@
                 if (_opts.parent) {
                     _opts.parent = this.$el;
                 }
+                
+                this.textRows = TextWrapPX(this.text, _opts);
 
-                this.textRows = textWrap(this.text, _opts);
-                return '';
+                return this.text;
+            },
+            updateStyle() {
+                return _.get(this.options, 'style') || {};
+            },
+            updateClass() {
+                return this.options.class || '';
             }
         }
     };
 </script>
+
+<style>
+.text-one-row {
+    white-space: nowrap;
+    margin-right: 20px;
+}
+</style>

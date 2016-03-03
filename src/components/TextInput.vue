@@ -16,7 +16,7 @@
         },
         data() {
             return {
-                text: ''
+                text: 'Deburrs string by converting latin-1 supplementary letters to basic latin letters and removing combining diacritical marks.'
             };
         },
         methods: {
