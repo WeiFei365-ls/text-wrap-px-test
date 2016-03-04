@@ -32,12 +32,13 @@ export default {
     data() {
         return {
             options: {
-                maxWidth: 200,
+                maxWidth: [200],
                 splitSymbol: ' ',
                 suffix: '...',
                 class: 'test1 test2',
                 style: {
-                    fontSize: '20px'
+                    'fontSize': '20px',
+                    'white-space': 'nowrap'
                 },
                 parent: true
             },

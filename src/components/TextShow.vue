@@ -3,7 +3,7 @@
         <br />
         <div class="panel panel-default">
             <div class="panel-body">
-                <span v-for="row in textRows" v-bind:class="updateClass" v-bind:style="updateStyle">{{row}}<br/></span>
+                <span v-for="row in textRows" v-bind:class="updateClass" v-bind:style="updateStyle" class="text-row">{{row}}<br/></span>
             </div>
         </div>
 
@@ -37,7 +37,7 @@
                 if (_opts.parent) {
                     _opts.parent = this.$el;
                 }
-                
+
                 this.textRows = TextWrapPX(this.text, _opts);
 
                 return this.text;
@@ -53,8 +53,17 @@
 </script>
 
 <style>
+.text-row,
+.text-one-row {
+    background-color: #f2f2f2;
+}
+
 .text-one-row {
     white-space: nowrap;
-    margin-right: 20px;
+    margin-right: 50px;
+}
+
+.text-wrap-px-show {
+    margin-bottom: 50px;
 }
 </style>
