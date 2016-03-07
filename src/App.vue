@@ -33,6 +33,7 @@ export default {
         return {
             options: {
                 maxWidth: [200],
+                maxRow: 99999,
                 splitSymbol: ' ',
                 suffix: '...',
                 class: 'test1 test2',

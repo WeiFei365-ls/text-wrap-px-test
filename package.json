@@ -9,7 +9,7 @@
   "dependencies": {
     "jsoneditor": "^5.1.5",
     "lodash": "^3.10.1",
-    "text-wrap-px": "^0.0.3",
+    "text-wrap-px": "^0.0.6",
     "vue": "^1.0.0"
   },
   "devDependencies": {
